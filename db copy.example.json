@@ -1,0 +1,94 @@
+{
+  "pizza": [
+    {
+      "id": 1,
+      "name": "Маргарита",
+      "ingredients": "Пшеничная мука, вода, соль, сахар, сухие дрожжи, оливковое масло, томаты, моцарелла, базилик",
+      "image_url": "https://masterpiecer-images.s3.yandex.net/0ed37283823911ee8704e6d39d9a42a4:upscaled",
+      "size": "S",
+      "weigth": 250,
+      "price": 400,
+      "isNew": false
+    },
+    {
+      "id": 2,
+      "name": "Пепперони",
+      "ingredients": "Тесто для пиццы, пепперони, грибы, лук, маслины, соус для пиццы",
+      "image_url": "https://masterpiecer-images.s3.yandex.net/4ebf25dd823a11ee92882aa0df1cd6e5:upscaled",
+      "size": "XL",
+      "weigth": 950,
+      "price": 1000,
+      "isNew": true
+    },
+    {
+      "id": 3,
+      "name": "4 сыра",
+      "ingredients": "Шампиньоны, красный лук, черри, пармезан, горгонзола, эмменталь, рикотта",
+      "image_url": "https://masterpiecer-images.s3.yandex.net/1a267286823b11ee8704e6d39d9a42a4:upscaled",
+      "size": "S",
+      "weigth": 300,
+      "price": 500,
+      "isNew": false
+    },
+    {
+      "id": 4,
+      "name": "Ветчина и сыр",
+      "ingredients": "Ветчина, сыр, помидоры, лук, оливки, специи",
+      "image_url": "https://masterpiecer-images.s3.yandex.net/b420b482823b11eeac0056181a0358a2:upscaled",
+      "size": "M",
+      "weigth": 500,
+      "price": 700,
+      "isNew": false
+    },
+    {
+      "id": 5,
+      "name": "Гавайская",
+      "ingredients": "Ананасы, ветчина, соус для пиццы",
+      "image_url": "https://masterpiecer-images.s3.yandex.net/3e518edb823c11eebee8da477c0f1ee2:upscaled",
+      "size": "M",
+      "weigth": 500,
+      "price": 800,
+      "isNew": false
+    },
+    {
+      "id": 6,
+      "name": "Супер мясная",
+      "ingredients": "Бекон, сосиски, салями, пепперони, лук, перец, грибы, оливки",
+      "image_url": "https://masterpiecer-images.s3.yandex.net/9c9cfe9d823c11eeb725baea8797b5f2:upscaled",
+      "size": "L",
+      "weigth": 750,
+      "price": 950,
+      "isNew": false
+    },
+    {
+      "id": 7,
+      "name": "Диабло",
+      "ingredients": "Салями, пепперони, острая колбаса, лук, красный перец",
+      "image_url": "https://masterpiecer-images.s3.yandex.net/d16fadda823c11ee9ad8f6f8c1ba65ae:upscaled",
+      "size": "S",
+      "weigth": 300,
+      "price": 600,
+      "isNew": false
+    },
+    {
+      "id": 8,
+      "name": "Барбекю",
+      "ingredients": "Соус барбекю, лук, бекон",
+      "image_url": "https://masterpiecer-images.s3.yandex.net/cceb5a02823d11ee94739209e5449f76:upscaled",
+      "size": "M",
+      "weigth": 500,
+      "price": 450,
+      "isNew": false
+    },
+    {
+      "id": 9,
+      "name": "Охотничья",
+      "ingredients": "Охотничьи колбаски, лук, грибы",
+      "image_url": "https://masterpiecer-images.s3.yandex.net/de33b6a4823e11eeb6631e5d9776cfa6:upscaled",
+      "size": "XL",
+      "weigth": 950,
+      "price": 1200,
+      "isNew": false
+    }
+  ]
+}

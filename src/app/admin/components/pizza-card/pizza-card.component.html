@@ -1,0 +1,21 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>
+        {{ pizza.name }}
+        <mat-icon *ngIf="pizza.isNew" class="card__icon" fontIcon="fiber_new"></mat-icon>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <div>Размер: {{ pizza.size }}</div>
+        <div>Вес: {{ pizza.weigth }}г.</div>
+      </mat-card-subtitle>
+      <img mat-card-md-image [src]="pizza.image_url">
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content class="card__content">
+    {{ pizza.ingredients }}
+  </mat-card-content>
+  <mat-card-actions align="end" class="card__price">
+    <b>&#x20bd;{{ pizza.price }}</b>
+  </mat-card-actions>
+</mat-card>

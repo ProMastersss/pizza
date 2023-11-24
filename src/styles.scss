@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+$primary: mat.define-palette(mat.$orange-palette, 900);
+$accent: mat.define-palette(mat.$pink-palette);
+
+$my-theme: mat.define-light-theme((
+  color: (
+    primary: $primary,
+    accent: $accent
+  )
+ ));
+@include mat.button-theme($my-theme);
+@include mat.radio-color($my-theme);
+@include mat.checkbox-color($my-theme);
+@include mat.all-component-themes($my-theme);
+@include mat.strong-focus-indicators-theme($my-theme);
+
+* {
+  font-family: "Patua One", sans-serif;
+}
+
+body {
+  background: #ff7300;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  background-color: #f7f7f7;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 10px 15px;
+  outline: 0;
+  width: 100%;
+  font-size: 14px;
+  &:focus {
+    border-color: #e3e3e3;
+  }
+  &--select {
+    background-image: url("/assets/img/pizza.png");
+    background-position: 98% center;
+    background-repeat: no-repeat;
+    appearance: none;
+  }
+  &--textarea {
+    resize: vertical;
+  }
+}

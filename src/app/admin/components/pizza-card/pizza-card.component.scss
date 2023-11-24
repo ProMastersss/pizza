@@ -1,0 +1,23 @@
+.card {
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  opacity: 1;
+  &:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+  }
+
+  &__content {
+    margin-top: 8px;
+  }
+
+  &__price {
+    padding: 0 8px 8px 8px;
+    min-height: auto;
+    font-size: 1.1rem;
+  }
+
+  &__icon {
+    color: #ff7300;
+  }
+}

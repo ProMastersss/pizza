@@ -1,0 +1,91 @@
+<header class="header">
+  <mat-icon class="header__icon" fontIcon="arrow_back_ios" (click)="goBack()"></mat-icon>
+  <h2 class="mat-h2">
+    @if (isEdit) {Редактирование} @else {Добавление}
+  </h2>
+</header>
+
+
+<form [formGroup]="pizzaForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="outline">
+    <mat-label>Название</mat-label>
+    <input matInput formControlName="name" type="text" required>
+    <mat-error>
+      <ng-container *ngTemplateOutlet="error; context: {control: pizzaForm.controls.name }"></ng-container>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Ингридиенты</mat-label>
+    <textarea matInput formControlName="ingredients" required></textarea>
+    <mat-error>
+      <ng-container *ngTemplateOutlet="error; context: {control: pizzaForm.controls.ingredients }"></ng-container>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Изображение</mat-label>
+    <mat-select formControlName="imageUrl" required>
+      <mat-select-trigger>
+        <span>Выбрано</span>
+      </mat-select-trigger>
+      @for (url of imagesUrl | async; track url) {
+        <mat-option [value]="url">
+          <img class="img" alt="Pizza" [src]="url">
+        </mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Вес</mat-label>
+    <input matInput formControlName="weigth" type="number" required>
+    <mat-error>
+      <ng-container *ngTemplateOutlet="error; context: {control: pizzaForm.controls.weigth }"></ng-container>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Цена</mat-label>
+    <input matInput formControlName="price" type="number" required>
+    <mat-error>
+      <ng-container *ngTemplateOutlet="error; context: {control: pizzaForm.controls.price }"></ng-container>
+    </mat-error>
+  </mat-form-field>
+
+  <div class="radio-group">
+    <label>Размер</label>
+    <mat-radio-group name="size" formControlName="size" required>
+      @for (size of sizes; track size) {
+        <mat-radio-button [value]="size" color="primary">{{size}}</mat-radio-button>
+      }
+    </mat-radio-group>
+    <mat-error>
+      <ng-container *ngTemplateOutlet="error; context: {control: pizzaForm.controls.size }"></ng-container>
+    </mat-error>
+  </div>
+
+  <div>
+    <mat-checkbox formControlName="isNew" [checked]="true" color="primary">
+      Новая?
+    </mat-checkbox>
+  </div>
+
+  <div class="btn-group">
+    @if (isEdit) {
+      <button mat-raised-button color="primary" type="submit">Сохранить</button>
+      <button mat-raised-button color="warn" type="button" (click)="deletePizza()">Удалить</button>
+    } @else {
+      <button mat-raised-button color="primary" type="submit">Добавить</button>
+      <button mat-raised-button type="button" (click)="resetForm()">Сбросить форму</button>
+    }
+  </div>
+</form>
+
+<ng-template #error let-control="control">
+  @if (control.invalid && (control.dirty || control.touched)) {
+    @if (control.errors?.['required']) {
+      <span>Обязательно для заполнения</span>
+    }
+  }
+</ng-template>
